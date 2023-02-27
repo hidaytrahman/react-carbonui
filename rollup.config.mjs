@@ -24,7 +24,9 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      scss(),
+      scss({
+        plugins: [],
+      }),
     ],
   },
   {
