@@ -8,9 +8,6 @@ import scss from "rollup-plugin-scss";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-import autoprefixer from "autoprefixer";
-import postcss from "postcss";
-
 export default [
   {
     input: "src/index.ts",
@@ -38,6 +35,6 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: ["styled-components", /\.(css|less|scss)$/],
+    external: [/\.(css|less|scss)$/],
   },
 ];

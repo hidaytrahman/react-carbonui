@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../core/theme";
 import { ButtonSize, ButtonVariant } from "./types";
 
 interface ButtonContainerTypes {
@@ -15,13 +14,13 @@ export const ButtonContainer = styled.button<ButtonContainerTypes>`
 
   ${({ variant }) =>
     variant === "primary"
-      ? `background: ${theme.colors.primary};`
+      ? `background: #D9E4DD;`
       : variant === "secondary"
-      ? `background: ${theme.colors.secondary};`
+      ? `background: #FBF7F0;`
       : variant === "danger"
-      ? `background: ${theme.colors.danger};`
+      ? `background: red;`
       : variant === "warning"
-      ? `background: ${theme.colors.warning};`
+      ? `background: yellow;`
       : variant === "link"
       ? `background: transparent;`
       : `color: #000;`};
