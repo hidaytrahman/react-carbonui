@@ -3,18 +3,19 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 
-import packageJson from "./package.json" assert { type: "json" };
+// import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
     input: "src/index.ts",
     output: [
       {
-        file: packageJson.main,
+        // Todo: fix it later to get main and module from the package json
+        file: "dist/cjs/index.js", //packageJson.main,
         format: "cjs",
       },
       {
-        file: packageJson.module,
+        file: "dist/esm/index.js", //packageJson.module,
         format: "esm",
       },
     ],
