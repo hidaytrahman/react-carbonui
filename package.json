@@ -1,6 +1,6 @@
 {
   "name": "react-carbonui",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A carbon copy UI to show the web page based on the traditional view",
   "scripts": {
     "rollup": "rollup -c",

@@ -1,15 +1,15 @@
 import React from "react";
 import { ButtonContainer } from "./Button.styles";
-import { ButtonVariant } from "./types";
+import { ButtonProps } from "./types";
 
-export interface ButtonProps {
-  label: string;
-  variant: ButtonVariant;
-}
-
-const Button = ({ label, variant = "primary", ...props }: ButtonProps) => {
+const Button = ({
+  label,
+  variant = "primary",
+  size = "regular",
+  ...props
+}: ButtonProps) => {
   return (
-    <ButtonContainer variant={variant} {...props}>
+    <ButtonContainer variant={variant} size={size} {...props}>
       {label}
     </ButtonContainer>
   );
