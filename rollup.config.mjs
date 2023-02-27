@@ -8,6 +8,9 @@ import scss from "rollup-plugin-scss";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
+import autoprefixer from "autoprefixer";
+import postcss from "postcss";
+
 export default [
   {
     input: "src/index.ts",
@@ -27,9 +30,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      scss({
-        plugins: [],
-      }),
+      scss(),
       terser(),
     ],
   },
@@ -37,6 +38,6 @@ export default [
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     plugins: [dts()],
-    external: [/\.(css|less|scss)$/],
+    external: ["styled-components", /\.(css|less|scss)$/],
   },
 ];
