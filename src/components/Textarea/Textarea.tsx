@@ -1,21 +1,22 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { InputContainer } from "./Textarea.styles";
 import { TextareaProps } from "./types";
 
-const Textarea = ({
-  variant = "primary",
-  scale = "regular",
-  fullWidth = false,
-  ...props
-}: TextareaProps) => {
-  return (
-    <InputContainer
-      variant={variant}
-      scale={scale}
-      fullWidth={fullWidth}
-      {...props}
-    />
-  );
-};
+const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+  (
+    { variant = "primary", scale = "regular", fullWidth = false, ...props },
+    ref
+  ) => {
+    return (
+      <InputContainer
+        variant={variant}
+        scale={scale}
+        fullWidth={fullWidth}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
 
 export default Textarea;
