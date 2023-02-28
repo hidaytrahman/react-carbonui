@@ -39,3 +39,5 @@ export default MyComp;
 ## Docs
 
 [Get started](https://github.com/hidaytrahman/react-carbonui/wiki)
+
+See in actions on [Storybook](https://hidaytrahman.github.io/react-carbonui/)
