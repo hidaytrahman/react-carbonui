@@ -6,11 +6,12 @@ const Button = ({
   label,
   variant = "primary",
   size = "regular",
+  children,
   ...props
 }: ButtonProps) => {
   return (
     <ButtonContainer variant={variant} size={size} {...props}>
-      {label}
+      {children ? children : label}
     </ButtonContainer>
   );
 };
