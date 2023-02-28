@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ReactNode } from "react";
 
 export type ButtonVariant =
   | "primary"
@@ -14,4 +14,5 @@ export interface ButtonProps
   label: string;
   variant?: ButtonVariant;
   size?: ButtonSize;
+  children?: ReactNode;
 }
