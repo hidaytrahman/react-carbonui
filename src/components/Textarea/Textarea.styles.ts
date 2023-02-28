@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { InputSize, InputVariant } from "./types";
+import { TextareaSize, TextareaVariant } from "./types";
 
 interface ButtonContainerTypes {
-  variant: InputVariant;
-  scale: InputSize;
+  variant: TextareaVariant;
+  scale: TextareaSize;
   fullWidth: boolean;
 }
 
-export const InputContainer = styled.input<ButtonContainerTypes>`
+export const InputContainer = styled.textarea<ButtonContainerTypes>`
   padding: 8px 10px;
   box-sizing: border-box;
   border: 0;
