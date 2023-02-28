@@ -5,7 +5,8 @@
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -37,11 +38,14 @@
     "@storybook/builder-webpack4": "^6.5.16",
     "@storybook/manager-webpack4": "^6.5.16",
     "@storybook/react": "^6.5.16",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.28",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.3.0",
     "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.17.3",
     "rollup-plugin-dts": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -49,9 +53,7 @@
     "sass": "^1.58.3",
     "styled-components": "^5.3.6",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",
