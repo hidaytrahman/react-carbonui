@@ -17,7 +17,8 @@
     "ui",
     "design",
     "style",
-    "react"
+    "react",
+    "components"
   ],
   "author": "Hidayt Rahman",
   "license": "MIT",
