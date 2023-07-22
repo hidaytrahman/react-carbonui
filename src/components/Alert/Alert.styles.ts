@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { AlertSize, AlertVariant } from './types';
+import { theme } from '../utils/colors';
 
 interface AlertContainerTypes {
 	variant: AlertVariant;
@@ -13,15 +14,15 @@ export const AlertContainer = styled.div<AlertContainerTypes>`
 
 	${({ variant }) =>
 		variant === 'primary'
-			? `background: #D9E4DD;`
+			? `background: ${theme.colors.primary};`
 			: variant === 'secondary'
-			? `background: #FBF7F0;`
+			? `background: ${theme.colors.secondary};`
 			: variant === 'danger'
-			? `background: #8C3333;`
+			? `background: ${theme.colors.danger}; color:${theme.colors.primaryContrast};`
 			: variant === 'warning'
-			? `background: #F2EE9D;`
+			? `background: ${theme.colors.warning};`
 			: variant === 'success'
-			? `background: #7A9D54;`
+			? `background: ${theme.colors.success};`
 			: `color: #000;`};
 
 	${({ size }) =>
