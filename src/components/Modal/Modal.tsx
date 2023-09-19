@@ -5,10 +5,20 @@ import Button from '../Button';
 
 const Modal = forwardRef<HTMLDivElement, ModalProps>(
 	(
-		{ title, onCancel, onConfirm, confirmTitle = 'Confirm', cancelTitle, children, closeX = false, ...props },
+		{
+			title,
+			isOpen,
+			onCancel,
+			onConfirm,
+			confirmTitle = 'Confirm',
+			cancelTitle,
+			hasCloseButton = false,
+			children,
+			...props
+		},
 		ref
 	) => {
-		const [open, setOpen] = useState(true);
+		const [open, setOpen] = useState(isOpen);
 
 		const handleOnCancel = () => {
 			setOpen(false);
@@ -26,7 +36,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
 					<header>
 						<div className='modal-title'>{title}</div>
 
-						{closeX && (
+						{hasCloseButton && (
 							<Button variant='link' size='large' onClick={handleOnCancel}>
 								x
 							</Button>

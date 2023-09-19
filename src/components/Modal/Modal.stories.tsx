@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Modal from './Modal';
 
@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
 	title: 'Basic Modal',
+	isOpen: true,
 	onConfirm: () => {
 		alert('done');
 	},
@@ -34,6 +35,7 @@ Basic.args = {
 export const ConfirmModal = Template.bind({});
 ConfirmModal.args = {
 	title: 'Are you sure ?',
+	isOpen: true,
 	onConfirm: () => {
 		alert('done');
 	},
@@ -49,6 +51,7 @@ ConfirmModal.args = {
 export const AlertModal = Template.bind({});
 AlertModal.args = {
 	title: 'Attention Required',
+	isOpen: true,
 	onConfirm: () => {
 		// your code
 	},
@@ -67,11 +70,12 @@ AlertModal.args = {
 export const InfoModal = Template.bind({});
 InfoModal.args = {
 	title: 'Read Guidelines',
+	isOpen: true,
 	onConfirm: () => {
 		// your code
 	},
 	confirmTitle: 'Okay!',
-	closeX: true,
+	hasCloseButton: true,
 	children: (
 		<>
 			<p>Feel free to customize the content, title, and buttons to suit your specific needs.</p>
