@@ -1,0 +1,34 @@
+name: Decorate PRs
+on: [pull_request]
+concurrency:
+  group: pr-decorator-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  size:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: add a label to PR signifying size
+        uses: codelytv/pr-size-labeler@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          xs_max_size: '100'
+          s_max_size: '300'
+          m_max_size: '800'
+          l_max_size: '1200'
+          fail_if_xl: 'false'
+          message_if_xl: 'This PR is longer than the suggested (1200 lines).
+            Please make sure that this PR only addresses one problem.
+
+            _Note: Because of its size, this PR might require some time to review._'
+  pr-stats:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run pull request stats
+        uses: flowwer-dev/pull-request-stats@master
+        with:
+          charts: true
+          period: 30
+          token: ${{ secrets.GITHUB_TOKEN }}
+
