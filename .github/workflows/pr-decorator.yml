@@ -29,6 +29,6 @@ jobs:
         uses: flowwer-dev/pull-request-stats@master
         with:
           charts: true
-          period: 7
+          period: 30
           token: ${{ secrets.GITHUB_TOKEN }}
 
