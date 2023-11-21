@@ -5,6 +5,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   size:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: add a label to PR signifying size
@@ -21,6 +22,7 @@ jobs:
 
             _Note: Because of its size, this PR might require some time to review._'
   pr-stats:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Run pull request stats

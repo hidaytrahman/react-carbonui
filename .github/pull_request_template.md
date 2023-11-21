@@ -1,11 +1,8 @@
-### What ?
+#### What?
+<!--- in a few lines, what does this PR do? --->
 
-<!-- Please describe about the changes -->
+#### How to test/validate?
+<!--- how can a tester validate this? --->
 
-### How to test ?
-
-<!-- Please add steps to test -->
-
-### Screenshots (if UI changes) ?
-
-<!-- Please add screenshots -->
+#### Screenshots (if appropriate):
+<!--- add some screenshots, if they apply --->
